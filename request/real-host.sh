@@ -111,7 +111,7 @@ echo ""
 echo ""
 rm -rf $HOME/hostextractor/ > /dev/null 2>&1
 rm -rf /etc/hostextractor
-wget -O $HOME/hostextractor.tgz https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/ADM-ULTIMATE-NEW-FREE/master/Install/hostextractor.tgz > /dev/null 2>&1
+wget -O $HOME/hostextractor.tgz https://raw.githubusercontent.com/sauceisgood/ADM-ULTIMATE-NEW-FREE/master/Install/hostextractor.tgz > /dev/null 2>&1
 tar -xvf hostextractor.tgz > /dev/null 2>&1
 rm -rf $HOME/hostextractor.tgz > /dev/null 2>&1
 mv $HOME/hostextractor/ /etc/ > /dev/null 2>&1
@@ -130,12 +130,12 @@ echo "[2] Un bloc para agregar sitios web "
 echo "[3] Muestra estatus de sitios web"
 echo "[4] Genera payload funcionales de sitios web / host"
 echo "[5] Muestra los puertos que esta abiertos en servicios web / IP/ proxy"
-echo " - Poner una coma después de cada puerto, ejemplo: 22,53,442,443,80,8080,3128"
+echo " - Poner una coma despuÃ©s de cada puerto, ejemplo: 22,53,442,443,80,8080,3128"
 echo "[6] Ver proxy o informacion de un sitio web o IP"
 echo "[7] Actualizar paqueteria de host-extractor"
 echo "[8] Actualizar script host-extractor"
 echo "[9] Manual de como usar el script host-extractor"
-echo "[0] Salir del menu 0 y 0 salir del menu en español"
+echo "[0] Salir del menu 0 y 0 salir del menu en espaÃ±ol"
 echo ""
 echo -e "$barra"
 echo -e "\e[1;31mEntrar para continuar" 
