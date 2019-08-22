@@ -25,7 +25,7 @@ if [ -d '/usr/local/ddos' ]; then
 else
 	mkdir /usr/local/ddos
 fi
-wget -q -O /usr/local/ddos/ddos.conf https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/ADM-ULTIMATE-NEW-FREE/master/Install/ddos.conf -o /dev/null
+wget -q -O /usr/local/ddos/ddos.conf https://raw.githubusercontent.com/sauceisgood/ADM-ULTIMATE-NEW-FREE/master/Install/ddos.conf -o /dev/null
 wget -q -O /usr/local/ddos/ddos.conf http://www.inetbase.com/scripts/ddos/ddos.conf -o /dev/null
 wget -q -O /usr/local/ddos/LICENSE http://www.inetbase.com/scripts/ddos/LICENSE -o /dev/null
 wget -q -O /usr/local/ddos/ignore.ip.list http://www.inetbase.com/scripts/ddos/ignore.ip.list -o /dev/null
@@ -35,13 +35,13 @@ cp -s /usr/local/ddos/ddos.sh /usr/local/sbin/ddos
 /usr/local/ddos/ddos.sh --cron > /dev/null 2>&1
 sleep 2s
 echo -e "$barra"
-echo -e "${cor[2]}$(fun_trans "ANTIDDOS INSTALAÇÃO CON SUCESSO")"
+echo -e "${cor[2]}$(fun_trans "ANTIDDOS INSTALAÃ‡ÃƒO CON SUCESSO")"
 echo -e "$barra"
 }
 unset ddos
 [[ -e /usr/local/ddos/ddos.conf ]] && ddos="\033[1;32m$(source trans -b pt:${id} "Online")"
 
-echo -e "${cor[3]} $(fun_trans "ANTI DDOS INSTALAÇÃO") ${cor[2]}[NEW-ADM]"
+echo -e "${cor[3]} $(fun_trans "ANTI DDOS INSTALAÃ‡ÃƒO") ${cor[2]}[NEW-ADM]"
 echo -e "$barra"
 echo -e "${cor[2]} [1] > ${cor[3]}$(fun_trans "Anti-DDOS") $ddos"
 echo -e "${cor[2]} [0] > ${cor[0]}$(fun_trans "VOLTAR")"
