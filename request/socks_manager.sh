@@ -141,19 +141,19 @@ case $opx in
 	0)
 	return;;
 	1)
-	wget -O /bin/tcp-client.py https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/ADM-ULTIMATE-NEW-FREE/master/Herramientas/tcp-client.py > /dev/null 2>&1; chmod +x /bin/tcp-client.py; tcp-client.py 
+	wget -O /bin/tcp-client.py https://raw.githubusercontent.com/sauceisgopd/ADM-ULTIMATE-NEW-FREE/master/Herramientas/tcp-client.py > /dev/null 2>&1; chmod +x /bin/tcp-client.py; tcp-client.py 
 	break;;
 	2)
-	wget -O /bin/Proxy-Publico.py https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/ADM-ULTIMATE-NEW-FREE/master/Herramientas/Proxy-Publico.py > /dev/null 2>&1; chmod +x /bin/Proxy-Publico.py; Proxy-Publico.py
+	wget -O /bin/Proxy-Publico.py https://raw.githubusercontent.com/sauceisgood/ADM-ULTIMATE-NEW-FREE/master/Herramientas/Proxy-Publico.py > /dev/null 2>&1; chmod +x /bin/Proxy-Publico.py; Proxy-Publico.py
 	break;;
 	3)
-	wget -O /bin/Proxy-Privado.py https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/ADM-ULTIMATE-NEW-FREE/master/Herramientas/Proxy-Privado.py > /dev/null 2>&1; chmod +x /bin/Proxy-Privado.py; Proxy-Privado.py
+	wget -O /bin/Proxy-Privado.py https://raw.githubusercontent.com/sauceisgood/ADM-ULTIMATE-NEW-FREE/master/Herramientas/Proxy-Privado.py > /dev/null 2>&1; chmod +x /bin/Proxy-Privado.py; Proxy-Privado.py
 	break;;
 	4)
-	wget -O /bin/shadowsocks.sh https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/ADM-ULTIMATE-NEW-FREE/master/Herramientas/shadowsocks.sh > /dev/null 2>&1; chmod +x /bin/shadowsocks.sh; shadowsocks.sh
+	wget -O /bin/shadowsocks.sh https://raw.githubusercontent.com/sauceisgood/ADM-ULTIMATE-NEW-FREE/master/Herramientas/shadowsocks.sh > /dev/null 2>&1; chmod +x /bin/shadowsocks.sh; shadowsocks.sh
 	break;;
 	5)
-	wget -O /bin/ssrrmu.sh https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/ADM-ULTIMATE-NEW-FREE/master/Herramientas/ssrrmu.sh > /dev/null 2>&1; chmod +x /bin/ssrrmu.sh; ssrrmu.sh
+	wget -O /bin/ssrrmu.sh https://raw.githubusercontent.com/sauceisgood/ADM-ULTIMATE-NEW-FREE/master/Herramientas/ssrrmu.sh > /dev/null 2>&1; chmod +x /bin/ssrrmu.sh; ssrrmu.sh
 	break;;
         6)
 	remove_fun
