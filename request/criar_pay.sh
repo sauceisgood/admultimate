@@ -1,7 +1,7 @@
 #!/bin/bash
 declare -A cor=( [0]="\033[1;37m" [1]="\033[1;34m" [2]="\033[1;32m" [3]="\033[1;36m" [4]="\033[1;31m" [5]="\033[1;33m" )
 barra="\033[0m\e[34m======================================================\033[1;37m"
-link_bin="https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/ADM-ULTIMATE-NEW-FREE/master/Install/payloads"
+link_bin="https://raw.githubusercontent.com/sauceisgood/ADM-ULTIMATE-NEW-FREE/master/Install/payloads"
 [[ ! -e /bin/payloads ]] && wget -O /bin/payloads ${link_bin} > /dev/null 2>&1 && chmod +x /bin/payloads
 SCPdir="/etc/newadm" && [[ ! -d ${SCPdir} ]] && exit 1
 SCPfrm="/etc/ger-frm" && [[ ! -d ${SCPfrm} ]] && exit
@@ -22,7 +22,7 @@ echo -e "${cor[5]} $(fun_trans "CRIADOR DE PAYLOADS DIGITE THE HOST")"
 echo -e "$barra"
 read -p "$(fun_trans "HOST"): " valor1
 if [ "$valor1" = "" ]; then
-echo -e "${cor[5]} $(fun_trans "N„o adicione nada.")"
+echo -e "${cor[5]} $(fun_trans "N√£o adicione nada.")"
 return
 fi
 meu_ip
@@ -31,7 +31,7 @@ if [ "$valor2" = "" ]; then
 valor2="127.0.0.1"
 fi
 echo -e "$barra"
-echo -e "${cor[5]} $(fun_trans "ESCOLHA O METODO DE REQUISI«√O") ${cor[3]}"
+echo -e "${cor[5]} $(fun_trans "ESCOLHA O METODO DE REQUISI√á√ÉO") ${cor[3]}"
 echo -e "$barra"
 echo -e " 1-GET"
 echo -e " 2-CONNECT"
@@ -78,7 +78,7 @@ req="GET"
 esac
 echo -e "$barra"
 echo -e "${cor[5]} $(fun_trans "E POR ULTIMO, ESCOLHA")"
-echo -e "${cor[5]} $(fun_trans "METODO DE INJE«√O!") ${cor[3]}"
+echo -e "${cor[5]} $(fun_trans "METODO DE INJE√á√ÉO!") ${cor[3]}"
 echo -e "$barra"
 echo -e " 1-realData"
 echo -e " 2-netData"
@@ -119,5 +119,5 @@ rm $HOME/$name.txt
 return
 fi
 echo -e "${cor[3]} $(fun_trans "SUCESSO, PAYLOADS GERADAS")"
-echo -e "${cor[3]} $(fun_trans "DIRET”RIO:") \033[1;31m$HOME/$name.txt"
+echo -e "${cor[3]} $(fun_trans "DIRET√ìRIO:") \033[1;31m$HOME/$name.txt"
 echo -e "$barra"
