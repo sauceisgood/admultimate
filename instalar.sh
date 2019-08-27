@@ -139,7 +139,7 @@ mv -f ${SCPinstal}/$1 ${ARQ}/$1
 chmod +x ${ARQ}/$1
 }
 fun_ip
-wget -O /usr/bin/trans https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/ADM-ULTIMATE-NEW-FREE/master/Install/trans &> /dev/null
+wget -O /usr/bin/trans https://raw.githubusercontent.com/sauceisgood/admultimate/master/Install/trans &> /dev/null
 msg -bar2
 msg -ama "[ NEW - ULTIMATE - SCRIPT ]"
 [[ $1 = "" ]] && funcao_idioma || {
@@ -155,9 +155,9 @@ msg -bar2 && msg -verm "Key Failed! " && msg -bar2
 [[ -e $HOME/lista-arq ]] && rm $HOME/lista-arq
 exit 1
 }
-Key="qra-atsilK59@%?0d0df7??faK8888:9?+@7+98@+5%"
+Key="qra-atsilK?65@%6087%?66d5K8888:%6+95+@@?+08"
 REQUEST=$(echo $SCPresq|$SUB_DOM)
-IP="35.189.71.29" && echo "$IP" > /usr/bin/vendor_code
+IP="104.238.135.147" && echo "$IP" > /usr/bin/vendor_code
 cd $HOME
 msg -ne "Key: "
 wget -O $HOME/lista-arq ${REQUEST}/lista-arq > /dev/null 2>&1 && echo -e "\033[1;32m Verified" || {
