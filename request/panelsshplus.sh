@@ -41,10 +41,10 @@ echo -e "\E[44;1;37m           PAINEL SSHPLUS v10           \E[0m"
 echo ""
 echo -e "                \033[1;31mATENCION"
 echo ""
-echo -e "\033[1;32mINFORME SIEMPRE LA MISMA CONTRASENA"
-echo -e "\033[1;32mSIEMPRE CONFIRME LAS PREGUNTAS CON \033[1;37m Y"
+echo -e "\033[1;32mINFORME SEMPRE A MESMA PASSWORD"
+echo -e "\033[1;32mCONFIRME SEMPRE AS PERGUNTAS COM \033[1;37m Y"
 echo ""
-echo -e "\033[1;36mINICIANDO INSTALACION"
+echo -e "\033[1;36mINSTALAÇÃO INICIADA"
 echo ""
 echo -e "\033[1;33mESPERE..."
 apt-get update > /dev/null 2>&1
@@ -69,8 +69,8 @@ echo ""
 clear
 echo -e "                \033[1;31mATENCION"
 echo ""
-echo -e "\033[1;32mINFORME SIEMPRE LA MISMA PASS CADA QUE SE LE SOLICITE"
-echo -e "\033[1;32mSIEMPRE CONFIRME LAS PREGUNTAS CON  \033[1;37m Y"
+echo -e "\033[1;32mINFORME SEMPRE A MESMA PASSWORD"
+echo -e "\033[1;32mCONFIRME SEMPRE AS PERGUNTAS COM  \033[1;37m Y"
 echo ""
 echo -ne "\033[1;33mEnter, Para Continuar!\033[1;37m"; read
 mysql_install_db
@@ -78,14 +78,14 @@ mysql_secure_installation
 clear
 echo -e "\033[1;36mINSTALANDO PHPMYADMIN\033[0m"
 echo ""
-echo -e "\033[1;31mATENCION \033[1;33m!!!"
+echo -e "\033[1;31mATENÇÃO \033[1;33m!!!"
 echo ""
-echo -e "\033[1;32mSELECIONE LA OPCION \033[1;31mAPACHE2 \033[1;32mCON LA TECLA '\033[1;33mENTER\033[1;32m'"
+echo -e "\033[1;32mSELECIONE A OPÇÃO \033[1;31mAPACHE2 \033[1;32mCOM A TECLA '\033[1;33mENTER\033[1;32m'"
 echo ""
-echo -e "\033[1;32mSELECIONE \033[1;31mYES\033[1;32m EN LA SIGUIENTE OPCION (\033[1;36mdbconfig-common\033[1;32m)"
-echo -e "PARA CONFIGURAR LA BASE DE DATOS"
+echo -e "\033[1;32mSELECIONE \033[1;31mYES\033[1;32m A SIGUIENTE OPCION (\033[1;36mdbconfig-common\033[1;32m)"
+echo -e "PARA CONFIGURAR A BASE DE DADOS"
 echo ""
-echo -e "\033[1;32mSIEMPRE INTRODUZCA LA MISMA CONTRASENA"
+echo -e "\033[1;32mINFORME SEMPRE A MESMA PASSWORD"
 echo ""
 echo -ne "\033[1;33mEnter, Para Continuar!\033[1;37m"; read
 apt-get install phpmyadmin -y
@@ -97,18 +97,18 @@ apt-get install php5-curl > /dev/null 2>&1
 service apache2 restart
 clear
 echo ""
-echo -e "\033[1;31mATENCION \033[1;33m!!!"
+echo -e "\033[1;31mATENÇÃO \033[1;33m!!!"
 echo ""
-echo -ne "\033[1;32mINTRODUZCA LA MISMA CONTRASENA\033[1;37m: "; read senha
+echo -ne "\033[1;32mINTRODUZA A MESMA PASSWORD\033[1;37m: "; read senha
 echo -e "\033[1;32mOK\033[1;37m"
 sleep 1
 mysql -h localhost -u root -p$senha -e "CREATE DATABASE plus"
 clear
-echo -e "\033[1;36mFINALIZANDO INSTALACION\033[0m"
+echo -e "\033[1;36mTERMINANDO A INSTALAÇÃO\033[0m"
 echo ""
 echo -e "\033[1;33mAGUARDE..."
 echo ""
-wget -O /var/www/index.html https://raw.githubusercontent.com/sauceisgood/ADM-ULTIMATE-NEW-FREE/master/Install/Panel_Web/index.html &> /dev/null
+wget -O /var/www/index.html https://raw.githubusercontent.com/sauceisgood/admultimate/master/Install/Panel_Web/index.html &> /dev/null
 mkdir /var/www/html
 cd /var/www/html
 wget https://www.dropbox.com/s/hap27l4buda652s/painel10.zip > /dev/null 2>&1
@@ -146,7 +146,7 @@ chmod 777 /var/www/html/admin/pages/faturas/comprovantes
 service apache2 restart
 sleep 1
 clear
-echo -e "\033[1;32mPANEL INSTALADO CON EXITO!"
+echo -e "\033[1;32mPAINEL INSTALADO COM SUCESSO!"
 echo ""
 echo -e "\033[1;36mLINK AREA DE ADMIN:\033[1;37m $IP:81/html/admin\033[0m"
 echo -e "\033[1;36mLINK AREA DE REVENDEDOR: \033[1;37m $IP:81/html\033[0m"
@@ -154,11 +154,11 @@ echo -e "\033[1;36mUSUARIO\033[1;37m admin\033[0m"
 echo -e "\033[1;36mCONTRASENA\033[1;37m admin\033[0m"
 echo ""
 
-echo -e "\033[1;36mINGRESE ESTE ENLACE EN LA VPS QUE SERA SERVIDOR\033[0m"
-echo -e "\033[1;37mwget http://ssh-plus.tk/revenda/confpainel/inst > /dev/null 2>&1; bash inst\033[0m"
+echo -e "\033[1;36mCORRE ESTE COMANDO NA VPS QUE VAI SER O PAINEL\033[0m"
+echo -e "\033[1;37mwget https://raw.githubusercontent.com/sauceisgood/admultimate/master/request/inst > /dev/null 2>&1; bash inst\033[0m"
 
 
-echo -e "\033[1;33mCambie la contrasena una vez entrando al panel\033[0m"
+echo -e "\033[1;33mTroque a senha assim que logar no painel\033[0m"
 cat /dev/null > ~/.bash_history && history -c
 }
 
