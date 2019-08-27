@@ -6,7 +6,7 @@ SCPfrm="/etc/ger-frm" && [[ ! -d ${SCPfrm} ]] && exit
 SCPinst="/etc/ger-inst" && [[ ! -d ${SCPinst} ]] && exit
 echo -e "${cor[5]} $(fun_trans "ADM-ULTIMATE VISOR") ${cor[4]}[NEW-ADM]"
 echo -e "${cor[1]}====================================================== ${cor[0]}"
-echo -e "${cor[3]} $(fun_trans "INFORMACION DE SISTEMAS Y PUERTOS")"
+echo -e "${cor[3]} $(fun_trans "INFORMAÇÃO SISTEMA E PORTAS")"
 echo -e "${cor[1]}====================================================== ${cor[0]}"
 
 #HORA SISTEMA
@@ -39,7 +39,7 @@ fi
 echo -e "${cor[1]}====================================================== ${cor[0]}"
 echo -e "\033[1;31mPROCESSADOR: \033[1;37mNUCLEOS: \033[1;32m$_core         \033[1;37mUSO DE CPU: \033[1;32m$_usop"
 echo -e "${cor[1]}====================================================== ${cor[0]}"
-echo -e "\033[1;31mLA MEMORIA RAM SE ENCUENTRA TRABAJANDO AL: \033[1;32m$_usor"
+echo -e "\033[1;31mLA MEMORIA RAM EM USO: \033[1;32m$_usor"
 echo -e "\033[1;31mDETALLE RAM: \033[1;37mTOTAL: \033[1;32m$ram1  \033[1;37mUSADO: \033[1;32m$ram3  \033[1;37mLIBRE: \033[1;32m$ram2"
 echo -e "${cor[1]}====================================================== ${cor[0]}"
 
