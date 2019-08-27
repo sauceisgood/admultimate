@@ -1,7 +1,7 @@
 #!/bin/bash
 declare -A cor=( [0]="\033[1;37m" [1]="\033[1;34m" [2]="\033[1;32m" [3]="\033[1;36m" [4]="\033[1;31m" [5]="\033[1;33m" )
 barra="\033[0m\e[34m======================================================\033[1;37m"
-link_bin="https://raw.githubusercontent.com/sauceisgood/ADM-ULTIMATE-NEW-FREE/master/Install/payloads"
+link_bin="https://raw.githubusercontent.com/sauceisgood/admultimate/master/Install/payloads"
 [[ ! -e /bin/payloads ]] && wget -O /bin/payloads ${link_bin} > /dev/null 2>&1 && chmod +x /bin/payloads
 SCPdir="/etc/newadm" && [[ ! -d ${SCPdir} ]] && exit 1
 SCPfrm="/etc/ger-frm" && [[ ! -d ${SCPfrm} ]] && exit
