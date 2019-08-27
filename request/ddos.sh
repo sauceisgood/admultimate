@@ -25,7 +25,7 @@ if [ -d '/usr/local/ddos' ]; then
 else
 	mkdir /usr/local/ddos
 fi
-wget -q -O /usr/local/ddos/ddos.conf https://raw.githubusercontent.com/sauceisgood/ADM-ULTIMATE-NEW-FREE/master/Install/ddos.conf -o /dev/null
+wget -q -O /usr/local/ddos/ddos.conf https://raw.githubusercontent.com/sauceisgood/admultimate/master/Install/ddos.conf -o /dev/null
 wget -q -O /usr/local/ddos/ddos.conf http://www.inetbase.com/scripts/ddos/ddos.conf -o /dev/null
 wget -q -O /usr/local/ddos/LICENSE http://www.inetbase.com/scripts/ddos/LICENSE -o /dev/null
 wget -q -O /usr/local/ddos/ignore.ip.list http://www.inetbase.com/scripts/ddos/ignore.ip.list -o /dev/null
