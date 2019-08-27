@@ -46,19 +46,19 @@ msg -bra "$(fun_trans "Asigne un nombre para el redirecionador")"
 msg -bar
 read -p " nombre: " namer
 msg -bar
-msg -ama "$(fun_trans "A que puerto redirecionara el puerto SSL")"
-msg -ama "$(fun_trans "Es decir un puerto abierto en su servidor")"
-msg -ama "$(fun_trans "Ejemplo Dropbear, OpenSSH, ShadowSocks, OpenVPN, Etc")"
+msg -ama "$(fun_trans "A que porta redecionará a porta SSL")"
+msg -ama "$(fun_trans "Qual a porta aberta no servidor")"
+msg -ama "$(fun_trans "Exemplo Dropbear, OpenSSH, ShadowSocks, OpenVPN, Etc")"
 msg -bar
 read -p " Local-Port: " portd
 msg -bar
-msg -ama "$(fun_trans "Que puerto desea agregar como SSL")"
+msg -ama "$(fun_trans "Que porta associar a SSL")"
 msg -bar
     while true; do
     read -p " Puerto SSL: " SSLPORTr
     [[ $(mportas|grep -w "$SSLPORTr") ]] || break
     msg -bar
-    echo -e "$(fun_trans "${cor[0]}Esta puerta está en uso")"
+    echo -e "$(fun_trans "${cor[0]}Esta porta está em uso")"
     msg -bar
     unset SSLPORT1
     done
@@ -72,7 +72,7 @@ echo "client = no" >> /etc/stunnel/stunnel.conf
 
 service stunnel4 restart > /dev/null 2>&1
 msg -bar
-msg -bra " $(fun_trans "AGREGADO CON EXITO") ${cor[2]}[!OK]"
+msg -bra " $(fun_trans "ASSOCIADO COM EXITO") ${cor[2]}[!OK]"
 msg -bar
 }
 
@@ -88,7 +88,7 @@ return
 }
 
 cleanreg () {
-echo -ne " \033[1;31m[ ! ] Registro del limitador eliminado"
+echo -ne " \033[1;31m[ ! ] Registo do limitador eliminado"
 sudo rm -rf /etc/newadm/ger-user/Limiter.log > /dev/null 2>&1 && echo -e "\033[1;32m [OK]"
 echo -e "$barra"
 sleep 3s
@@ -96,8 +96,8 @@ adm
 }
 
 userdell () {
-echo -e "\033[1;33mATENCION ESTO REMOVERA TODOS LOS USUARIOS\033[0m"
-echo -e "\033[1;33mNO FUNCIONA CON OPENVPN\033[0m"
+echo -e "\033[1;33mATENÇÃO INSTO REMOVERÁ TODOS OS USERS\033[0m"
+echo -e "\033[1;33mNÃO FUNCIONA COM OPENVPN\033[0m"
 echo -e "$barra"
 read -p "Opcion [S/N]: " -e -i s remov
 if [ "$remov" = "s" ]
@@ -106,11 +106,11 @@ for u in `awk -F : '$3 > 900 { print $1 }' /etc/passwd | grep -v "nobody" |grep 
 userdel $u
 done
 echo -e "$barra"
-echo -e "\033[1;31mUSUARIOS ELIMINADOS CON EXITO [OK]!\033[0m"
+echo -e "\033[1;31mUSUARIOS ELIMINADOS COM EXITO [OK]!\033[0m"
 echo -e "$barra"
 else
 echo -e "$barra"
-echo -e "\033[1;31mOPERACION CANCELADA\033[0m"
+echo -e "\033[1;31mOPERAÇÃO CANCELADA\033[0m"
 echo -e "$barra"
   sleep 5s
 adm
@@ -127,11 +127,11 @@ echo -e "${cor[2]} [3] > ${cor[3]}$(fun_trans "Proxy Python Color Privado")"
 echo -e "${cor[2]} [4] > ${cor[3]}$(fun_trans "ShadowSocks Libev Server")"
 echo -e "${cor[2]} [5] > ${cor[3]}$(fun_trans "ShadowSocks Manager RRMU")"
 echo -e "$barra"
-echo -e "${cor[2]} [6] > ${cor[3]}$(fun_trans "Detenga todos los Sockts de python")"
+echo -e "${cor[2]} [6] > ${cor[3]}$(fun_trans "Desligar todos os Socks de python")"
 echo -e "$barra"
-echo -e "${cor[2]} [7] > ${cor[3]}$(fun_trans "Eliminar Registro del Limitador")"
-echo -e "${cor[2]} [8] > ${cor[3]}$(fun_trans "Eliminar todos los usuarios del VPS")"
-echo -e "${cor[2]} [9] > ${cor[3]}$(fun_trans "Multi portos SSL")"
+echo -e "${cor[2]} [7] > ${cor[3]}$(fun_trans "Eliminar Registo do Limitador")"
+echo -e "${cor[2]} [8] > ${cor[3]}$(fun_trans "Eliminar todos os usuarios da VPS")"
+echo -e "${cor[2]} [9] > ${cor[3]}$(fun_trans "Multi portas SSL")"
 echo -e "${cor[2]} [0] > ${cor[0]}$(fun_trans "VOLTAR")\n${barra}"
 while [[ ${opx} != @(0|[1-9]) ]]; do
 echo -ne "${cor[0]}$(fun_trans "Digite a Opcao"): \033[1;37m" && read opx
@@ -141,19 +141,19 @@ case $opx in
 	0)
 	return;;
 	1)
-	wget -O /bin/tcp-client.py https://raw.githubusercontent.com/sauceisgopd/ADM-ULTIMATE-NEW-FREE/master/Herramientas/tcp-client.py > /dev/null 2>&1; chmod +x /bin/tcp-client.py; tcp-client.py 
+	wget -O /bin/tcp-client.py https://raw.githubusercontent.com/sauceisgood/admultimate/master/Herramientas/tcp-client.py > /dev/null 2>&1; chmod +x /bin/tcp-client.py; tcp-client.py 
 	break;;
 	2)
-	wget -O /bin/Proxy-Publico.py https://raw.githubusercontent.com/sauceisgood/ADM-ULTIMATE-NEW-FREE/master/Herramientas/Proxy-Publico.py > /dev/null 2>&1; chmod +x /bin/Proxy-Publico.py; Proxy-Publico.py
+	wget -O /bin/Proxy-Publico.py https://raw.githubusercontent.com/sauceisgood/admultimate/master/Herramientas/Proxy-Publico.py > /dev/null 2>&1; chmod +x /bin/Proxy-Publico.py; Proxy-Publico.py
 	break;;
 	3)
-	wget -O /bin/Proxy-Privado.py https://raw.githubusercontent.com/sauceisgood/ADM-ULTIMATE-NEW-FREE/master/Herramientas/Proxy-Privado.py > /dev/null 2>&1; chmod +x /bin/Proxy-Privado.py; Proxy-Privado.py
+	wget -O /bin/Proxy-Privado.py https://raw.githubusercontent.com/sauceisgood/admultimate/master/Herramientas/Proxy-Privado.py > /dev/null 2>&1; chmod +x /bin/Proxy-Privado.py; Proxy-Privado.py
 	break;;
 	4)
-	wget -O /bin/shadowsocks.sh https://raw.githubusercontent.com/sauceisgood/ADM-ULTIMATE-NEW-FREE/master/Herramientas/shadowsocks.sh > /dev/null 2>&1; chmod +x /bin/shadowsocks.sh; shadowsocks.sh
+	wget -O /bin/shadowsocks.sh https://raw.githubusercontent.com/sauceisgood/admultimate/master/Herramientas/shadowsocks.sh > /dev/null 2>&1; chmod +x /bin/shadowsocks.sh; shadowsocks.sh
 	break;;
 	5)
-	wget -O /bin/ssrrmu.sh https://raw.githubusercontent.com/sauceisgood/ADM-ULTIMATE-NEW-FREE/master/Herramientas/ssrrmu.sh > /dev/null 2>&1; chmod +x /bin/ssrrmu.sh; ssrrmu.sh
+	wget -O /bin/ssrrmu.sh https://raw.githubusercontent.com/sauceisgood/admultimate/master/Herramientas/ssrrmu.sh > /dev/null 2>&1; chmod +x /bin/ssrrmu.sh; ssrrmu.sh
 	break;;
         6)
 	remove_fun
